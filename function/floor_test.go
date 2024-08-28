@@ -24,7 +24,8 @@ func TestFloor(t *testing.T) {
 
 func TestItoa(t *testing.T) {
 	tests := []struct {
-		input int
+		input int	// position :=0
+		// positions :=[]int{}
 		want  string
 	}{
 		{-254, "-254"},
