@@ -8,7 +8,8 @@ func TestFloor(t *testing.T) {
 	tests := []struct {
 		input string
 		want  int
-	}{{"()()", 0},
+	}{
+		{"()()", 0},
 		{"(()(()(", 3},
 		{"))(((((", 3},
 		{"))(", -1},
@@ -22,3 +23,20 @@ func TestFloor(t *testing.T) {
 	}
 }
 
+func TestPosition(t *testing.T) {
+	tests := []struct {
+		input        string
+		wantposition int
+	}{
+		{"())", 3},
+		{"(()))", 5},
+		{"())", 3},
+		{")(", 1},
+	}
+	for _, test := range tests {
+		gotposition := Position(test.input)
+		if test.wantposition != gotposition {
+			t.Errorf("TestPostion Failed : wantposition %v ; gotposition %v", test.wantposition, gotposition)
+		}
+	}
+}
