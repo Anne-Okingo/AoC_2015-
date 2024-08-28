@@ -1,10 +1,11 @@
 package main
 
 import (
-	f "AoC_2015-/function"
 	"bufio"
 	"fmt"
 	"os"
+
+	f "AoC_2015-/function"
 )
 
 func main() {
