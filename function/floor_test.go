@@ -22,20 +22,3 @@ func TestFloor(t *testing.T) {
 	}
 }
 
-func TestItoa(t *testing.T) {
-	tests := []struct {
-		input int	// position :=0
-		// positions :=[]int{}
-		want  string
-	}{
-		{-254, "-254"},
-		{254, "254"},
-		{0, "0"},
-	}
-	for _, test := range tests {
-		got := Itoa(test.input)
-		if test.want != got {
-			t.Errorf("TestItoa Failed : Want : %v, Got : %v", test.want, got)
-		}
-	}
-}
