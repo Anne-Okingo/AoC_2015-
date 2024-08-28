@@ -4,18 +4,24 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strings"
 
 	f "AoC_2015-/function"
 )
 
 func main() {
 	if len(os.Args) != 2 {
-		fmt.Println("Error Usage should be : go run . lift.txt")
+		fmt.Println("Error Usage should be : go run . <name of file>.txt")
 		os.Exit(1)
 	}
 
 	filepath := os.Args[1]
 
+	suffix := ".txt"
+	if !strings.HasSuffix(filepath, suffix) {
+		fmt.Println("Error : Filepath should be <name of file>.txt")
+		return
+	}
 	FilePath, err := os.Open(filepath)
 	if err != nil {
 		fmt.Println("Error Opening File", err)
