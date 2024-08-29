@@ -31,6 +31,7 @@ func main() {
 	scanner := bufio.NewScanner(file)
 
 	TotalWrapPaper := 0
+	TotalRibon := 0
 
 	for scanner.Scan() {
 		str := scanner.Text()
@@ -61,8 +62,13 @@ func main() {
 		height := f.Atoi(slice[2])
 
 		WrapPaper := (f.WrapPaper(length, width, height))
+		Ribbon := f.Ribbon(length,width,height)
 		TotalWrapPaper += WrapPaper
+		TotalRibon += Ribbon
 
 	}
-	fmt.Println(TotalWrapPaper)
+	fmt.Printf("TotalWrapPaper : %v", TotalWrapPaper)
+	fmt.Println()
+	fmt.Printf("TotalRibbon: %v", TotalRibon)
+	fmt.Println()
 }
