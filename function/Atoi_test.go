@@ -6,19 +6,19 @@ import (
 
 func TestAtoi(t *testing.T) {
 
-	tests := []struct{
+	tests := []struct {
 		input string
-		want int
+		want  int
 	}{
-		{"-254",-254},
-		{"254",254},
-		{"+254",254},
+		{"-254", -254},
+		{"254", 254},
+		{"+254", 254},
 	}
 
-	for _, test := range tests{
+	for _, test := range tests {
 		got := Atoi(test.input)
-		if test.want != got{
+		if test.want != got {
 			t.Errorf("TestAtoi Failed : Want : %v, Got : %v", test.want, got)
-		} 
+		}
 	}
 }
