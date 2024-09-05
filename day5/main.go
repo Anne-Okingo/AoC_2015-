@@ -37,7 +37,7 @@ func main() {
 		line := scanner.Text()
 		inputSlice = append(inputSlice, line)
 	}
-	if len (inputSlice)== 0{
+	if len(inputSlice) == 0 {
 		fmt.Println("Error : empty file")
 		return
 	}
