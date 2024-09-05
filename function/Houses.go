@@ -1,7 +1,7 @@
 package functions
 
-import(
-"fmt"
+import (
+	"fmt"
 )
 
 func Houses(s string) int {
