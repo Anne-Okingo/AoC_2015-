@@ -1,10 +1,10 @@
 package functions
 
-import(
-"testing"
+import (
+	"testing"
 )
 
-func TestHouses(t *testing.T){
+func TestHouses(t *testing.T) {
 	input := "^^<<v<<v>"
 	want := 10
 
