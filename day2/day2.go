@@ -62,7 +62,7 @@ func main() {
 		height := f.Atoi(slice[2])
 
 		WrapPaper := (f.WrapPaper(length, width, height))
-		Ribbon := f.Ribbon(length,width,height)
+		Ribbon := f.Ribbon(length, width, height)
 		TotalWrapPaper += WrapPaper
 		TotalRibon += Ribbon
 
