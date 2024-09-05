@@ -8,7 +8,7 @@ import (
 func TestContainsTrue(t *testing.T) {
 	input := "rthkunfaakmwmush"
 	want := true
-	
+
 	got := Contains(input)
 	if got != want {
 		t.Errorf("TestContainsTrue failled : got : %v want : %v", want, got)
@@ -104,4 +104,3 @@ func TestCountNiceStringFalse(t *testing.T) {
 		t.Errorf("TestCountNiceStringFalse failled : got : %v want : %v", want, got)
 	}
 }
-
